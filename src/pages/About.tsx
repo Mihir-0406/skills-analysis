@@ -220,7 +220,7 @@ const About = () => {
                     <span className="text-primary-500 font-semibold">2020</span>
                     <h3 className="text-xl font-bold mt-2 mb-3 text-gray-900 dark:text-white">The Idea Spark</h3>
                     <p className="text-gray-700 dark:text-gray-300">
-                      Kaushal identified a gap in career development: professionals didn't know what skills they needed to advance.
+                      Mihir identified a gap in career development: professionals didn't know what skills they needed to advance.
                     </p>
                   </div>
                 </div>
