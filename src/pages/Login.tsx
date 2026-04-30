@@ -19,7 +19,7 @@ const Login = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     try {
       const response = await fetch("http://localhost:3001/login", {
         method: "POST",
@@ -40,15 +40,15 @@ const Login = () => {
       } else {
         toast({
           title: "Login Failed!",
-          description: result.error || "Invalid credentials. Please try again.",
+          description: result.error || "Invalid email or password. Please try again.",
           variant: "destructive",
         });
       }
     } catch (err) {
       console.error("Login error: ", err);
       toast({
-        title: "Connection Error!",
-        description: "Please make sure your backend server is running.",
+        title: "Backend Not Running!",
+        description: "Please start the backend server: cd server && node index.js",
         variant: "destructive",
       });
     } finally {

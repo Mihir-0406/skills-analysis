@@ -23,45 +23,35 @@ const About = () => {
       {/* Philosophy Section */}
       <section className="py-24 bg-gray-50/50 dark:bg-gray-900/50 relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div data-aos="fade-right">
+            <div data-aos="fade-up" className="max-w-3xl mx-auto">
               <div className="glass-card p-10 rounded-3xl space-y-8 relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-1 h-full bg-primary-500 transition-all group-hover:w-2"></div>
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Our Philosophy</h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                   We believe that every professional, regardless of their starting point, deserves a clear, data-backed roadmap to their dream career. 
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
-                    <div className="h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center text-primary-600 flex-shrink-0">
-                      <Target className="h-5 w-5" />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="flex flex-col items-center text-center gap-4 text-gray-700 dark:text-gray-300 p-4 rounded-2xl bg-white/50 dark:bg-gray-800/50">
+                    <div className="h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center text-primary-600 flex-shrink-0">
+                      <Target className="h-6 w-6" />
                     </div>
-                    <span className="font-medium">Precision: We don't guess, we analyze real-world matching.</span>
+                    <span className="font-medium text-sm">Precision: We don't guess, we analyze real-world matching.</span>
                   </div>
-                  <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
-                    <div className="h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center text-primary-600 flex-shrink-0">
-                      <Rocket className="h-5 w-5" />
+                  <div className="flex flex-col items-center text-center gap-4 text-gray-700 dark:text-gray-300 p-4 rounded-2xl bg-white/50 dark:bg-gray-800/50">
+                    <div className="h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center text-primary-600 flex-shrink-0">
+                      <Rocket className="h-6 w-6" />
                     </div>
-                    <span className="font-medium">Speed: Skip the generic courses; learn exactly what you lack.</span>
+                    <span className="font-medium text-sm">Speed: Skip the generic courses; learn exactly what you lack.</span>
                   </div>
-                  <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
-                    <div className="h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center text-primary-600 flex-shrink-0">
-                      <Heart className="h-5 w-5" />
+                  <div className="flex flex-col items-center text-center gap-4 text-gray-700 dark:text-gray-300 p-4 rounded-2xl bg-white/50 dark:bg-gray-800/50">
+                    <div className="h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center text-primary-600 flex-shrink-0">
+                      <Heart className="h-6 w-6" />
                     </div>
-                    <span className="font-medium">Passion: We care about your long-term fulfillment.</span>
+                    <span className="font-medium text-sm">Passion: We care about your long-term fulfillment.</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="relative" data-aos="fade-left">
-              <div className="absolute -inset-4 bg-primary-500/10 rounded-full blur-3xl -z-10"></div>
-              <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978"
-                alt="Our values"
-                className="rounded-3xl shadow-2xl w-full border border-gray-200 dark:border-gray-800"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -75,21 +65,19 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: 'Mihir Dabhi', role: 'Founder & CEO', img: 'https://randomuser.me/api/portraits/men/85.jpg', bio: 'Helping professionals bridge the gap with AI.' },
-              { name: 'Hirva Vachhani', role: 'Lead Architect', img: 'https://randomuser.me/api/portraits/women/63.jpg', bio: 'The mind behind our mapping algorithms.' },
-              { name: 'Samarth Vegada', role: 'Head of Product', img: 'https://randomuser.me/api/portraits/men/32.jpg', bio: 'Obsessed with user experience and growth.' },
-              { name: 'Ritu Pal', role: 'UX Research', img: 'https://randomuser.me/api/portraits/women/29.jpg', bio: 'Understanding the human side of career shift.' }
+              { name: 'Mihir Dabhi', role: 'Founder & CEO', bio: 'Helping professionals bridge the gap with AI.' },
+              { name: 'Hirva Vachhani', role: 'Lead Architect', bio: 'The mind behind our mapping algorithms.' },
+              { name: 'Samarth Vegada', role: 'Head of Product', bio: 'Obsessed with user experience and growth.' }
             ].map((member, i) => (
               <div key={member.name} className="glass-card group p-8 rounded-3xl text-center hover:shadow-2xl hover:shadow-primary-500/10 transition-all border-b-4 border-transparent hover:border-primary-500" data-aos="fade-up" data-aos-delay={i * 100}>
-                <div className="relative w-32 h-32 mx-auto mb-6">
-                  <div className="absolute inset-0 rounded-full bg-primary-500/20 group-hover:scale-110 transition-all duration-300"></div>
-                  <img src={member.img} alt={member.name} className="relative z-10 w-32 h-32 rounded-full object-cover border-4 border-white dark:border-gray-800" />
+                <div className="relative w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-primary-50 dark:bg-primary-900/20 group-hover:bg-primary-500 group-hover:text-white transition-colors">
+                  <Users className="h-10 w-10" />
                 </div>
-                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                <p className="text-primary-600 font-medium mb-3">{member.role}</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{member.bio}</p>
+                <h3 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">{member.name}</h3>
+                <p className="text-primary-600 dark:text-primary-400 font-medium mb-3">{member.role}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{member.bio}</p>
               </div>
             ))}
           </div>
@@ -162,7 +150,6 @@ const About = () => {
             <Rocket className="h-6 w-6 text-primary-600" />
             <span className="font-bold text-gray-900 dark:text-white">Skill Gap Analyzer</span>
           </div>
-          <p className="text-gray-500 text-sm">Created with pride by Mihir Dabhi - Lab 5 Ready.</p>
         </div>
       </footer>
     </div>

@@ -19,7 +19,7 @@ const Signup = () => {
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     try {
       const response = await fetch("http://localhost:3001/register", {
         method: "POST",
@@ -32,7 +32,7 @@ const Signup = () => {
       if (response.ok) {
         toast({
           title: "Account Created!",
-          description: result.message || "Registration successful. Please login to continue.",
+          description: "Registration successful. Please login to continue.",
         });
         navigate('/login');
       } else {
@@ -45,8 +45,8 @@ const Signup = () => {
     } catch (err) {
       console.error("Signup error: ", err);
       toast({
-        title: "Connection Error!",
-        description: "Please check if your backend server is running.",
+        title: "Backend Not Running!",
+        description: "Please start the backend server: cd server && node index.js",
         variant: "destructive",
       });
     } finally {
